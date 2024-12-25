@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!-- активность для всплывающего снизу вверх окошка -->
+
+
+    <!-- подробности -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Подробности"
+        android:textSize="32dp"
+        android:gravity="center"/>
+
+    <!-- блок данных -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center">
+
+        <!-- ощущается как -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:layout_gravity="center"                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:text="Ощущается как "/>
+            <TextView
+                android:id="@+id/feelsLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textSize="30dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:text="52"/>
+        </LinearLayout>
+
+        <!-- влажность -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:layout_gravity="center"                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:text="влажность "/>
+            <TextView
+                android:id="@+id/humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textSize="30dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:text="52"/>
+        </LinearLayout>
+
+        <!-- скорость ветра -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:layout_gravity="center"                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:text="Скорость ветра "/>
+            <TextView
+                android:id="@+id/windSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textSize="30dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:text="52"/>
+        </LinearLayout>
+
+        <!-- описание -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"                android:layout_marginLeft="10dp"
+                android:text="Описание "/>
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="30dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:text="переменно облачно"/>
+        </LinearLayout>
+
+
+        <!-- макс. температура -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:text="Макс. Температура "/>
+            <TextView
+                android:id="@+id/maxTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textSize="30dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:text="52"/>
+        </LinearLayout>
+        <!-- мин. температура -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:text="Мин. Температура "/>
+            <TextView
+                android:id="@+id/minTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:textSize="30dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:text="52"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

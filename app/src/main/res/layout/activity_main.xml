@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginBottom="150dp"
+            android:orientation="vertical">
+
+            <!-- блок данных о погоде -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+              <!-- название города -->
+            <TextView
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Введите город"
+                android:textSize="36dp"
+                android:gravity="center"/>
+
+                <!-- Блок основных данных по городу -->
+                <LinearLayout
+                    android:id="@+id/showWeather"
+                    android:visibility="invisible"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <!-- обертка для скругления углов -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="10dp">
+
+                        <!-- блок данных -->
+                        <LinearLayout
+                            android:background="@color/card"
+                            android:padding="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!-- блок температуры и иконки-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <!-- температура -->
+                                <TextView
+                                    android:id="@+id/degrees"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textSize="100dp"
+                                    android:text="24"/>
+                                <!-- иконка -->
+                                <ImageView
+                                    android:id="@+id/weather_image"
+                                    android:layout_width="64dp"
+                                    android:layout_height="64dp"
+                                    android:layout_marginBottom="40dp"/>
+
+                            </LinearLayout>
+
+                            <!-- дата -->
+                            <TextView
+                                android:id="@+id/dateTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <!-- горизонтальный список дат следующих-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:padding="8dp"
+                    android:background="@color/buttons"
+                    android:id="@+id/weatherRecyclerView"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:visibility="invisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:scrollbars="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:ignore="MissingConstraints">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <!-- блок для поиска локации для погоды-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints">
+
+                <!-- Ввод города -->
+                <EditText
+                    android:id="@+id/searchCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:textSize="16dp"
+                    android:hint="Введите город"/>
+
+                <!-- блок с кнопками -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!-- кнпока найти город -->
+                    <Button
+                        android:id="@+id/getLocation"
+                        android:layout_width="340dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/buttons"
+                        android:text="Найти город" />
+
+                    <!-- кнопка получения геолокации -->
+                    <ImageButton
+                        android:id="@+id/get_location"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/location_pin_svgrepo_com"
+                        android:scaleType="fitCenter"
+                        android:background="@color/buttons"
+                        android:padding="12dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
